@@ -1,0 +1,13 @@
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: lightgray;
+    padding: 30px;
+    margin-top: 226px;
+}
+
+.site-footer span {
+    font-size: small;
+}

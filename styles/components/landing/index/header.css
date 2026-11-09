@@ -1,0 +1,27 @@
+header {
+  background-color: darkblue;
+  color: white;
+  padding: 35px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header-login a {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-login a:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
