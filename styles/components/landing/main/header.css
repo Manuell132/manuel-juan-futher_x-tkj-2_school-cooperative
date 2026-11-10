@@ -1,0 +1,40 @@
+.main-header {
+  background-color: darkblue;
+  color: white;
+  padding: 35px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.main-header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user {
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.btn-logout {
+    color: darkblue;
+    background-color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
