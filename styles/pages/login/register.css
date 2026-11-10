@@ -1,0 +1,14 @@
+@import url(../../base.css);
+@import url(../../components/landing/login/input.css);
+
+.choice-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  accent-color: darkblue;
+}
+
+.login {
+  margin-top: 30px;
+  text-align: center;
+}

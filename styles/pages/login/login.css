@@ -1,0 +1,7 @@
+@import url(../../base.css);
+@import url(../../components/landing/login/input.css);
+
+.register {
+  text-align: center;
+  margin-top: 200px;
+}
