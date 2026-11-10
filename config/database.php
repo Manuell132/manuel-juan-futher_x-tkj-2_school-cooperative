@@ -18,3 +18,5 @@ try {
 } catch (PDOException $e) {
     die("Gagal mengoneksi ke database: " . $e->getMessage());
 }
+
+?>
