@@ -2,11 +2,9 @@
 session_start();
 require_once __DIR__ . "/../../../config/database.php";
 
-// Cek hak akses admin (sesuaikan dengan session login Anda)
 $isAdmin = isset($_SESSION['username']) && $_SESSION['username'] === 'admin101';
 $homeUrl = $isAdmin ? '../../admin/main.php' : '../main.php';
 
-// Ambil data produk dari database
 try {
     $stmt = $pdo->query("SELECT * FROM products");
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -14,7 +12,6 @@ try {
     $products = [];
 }
 
-// Ambil session error (misal gagal hapus) lalu langsung unset agar tidak muncul terus
 $errors = $_SESSION['errors'] ?? [];
 unset($_SESSION['errors']);
 
@@ -27,13 +24,6 @@ $title = "Data Produk - Koperasi Sekolah";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="../../../styles/pages/main/products/index.css">
-    <style>
-        .alert-error { background: #f8d7da; color: #721c24; padding: 10px; margin-bottom: 15px; border-radius: 4px; }
-        .alert-success { background: #d4edda; color: #155724; padding: 10px; margin-bottom: 15px; border-radius: 4px; }
-        .btn-action { padding: 5px 10px; text-decoration: none; border-radius: 4px; color: #fff; font-size: 13px; display: inline-block; margin-right: 4px; }
-        .btn-edit-action { background-color: #f39c12; }
-        .btn-delete-action { background-color: #e74c3c; }
-    </style>
 </head>
 <body>
     <?php require_once __DIR__ . "/../../../components/landing/main/header.php" ?>
